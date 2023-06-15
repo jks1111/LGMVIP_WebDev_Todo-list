@@ -1,0 +1,93 @@
+body{
+  background-color: blanchedalmond;
+  font-family: Arial, Helvetica, sans-serif  ;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.box{
+
+  width:60%;
+  padding: 25px; 
+  height: fit-content;
+  height: calc(content + 100px);
+  background-color: rgb(123, 120, 120);
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: #282c34 ;
+  margin: auto ;
+  margin-top:5%;
+
+}
+
+.Header{
+  width: 95%;
+  padding: 10px 20px;
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #282c34;
+  border-radius: 10px;
+}
+
+input[type=text] , select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 30px 0;
+  display: inline-block;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button{
+  width: 10%;
+  background-color: #282c34;
+  color: aliceblue;
+  padding: 14px 20px;
+  margin: 8px 0px 0px 1px ;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
