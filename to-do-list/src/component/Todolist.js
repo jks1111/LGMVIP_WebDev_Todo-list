@@ -13,6 +13,26 @@ export default function Todolist() {
             return newlist;
           })
   }
+
+  
+  function removetask(i){
+    const updateddatalist = datalist.filter((elem,id)=>{return i!==id;})
+     alert("Remove the Task?")
+    setdatalist(updateddatalist);
+  }
+  
+  
+  function TaskCompleted(i){
+    const updateddatalist = datalist.filter((elem,id)=>{return i!==id;})
+    alert("Task Completed");
+    setdatalist(updateddatalist);
+  } 
+
+  function removeAll (){
+    setdatalist([]);
+    alert("Remove all Task?");
+  }
+
   return (
     <React.Fragment>
       <div className="box">
@@ -23,7 +43,27 @@ export default function Todolist() {
           value={activity}
           onChange={(e) => setActivity(e.target.value)}
         />
-        <button onClick={addActivity}>Add</button>
+        <button className="Addbutton" onClick={addActivity}>Add</button>
+        { datalist.length>=1 && <p className="main-heading">Today's Task</p> }
+        {datalist!==[] && datalist.map((data,i)=>{
+          return(
+            <React.Fragment>
+              <p key={i}>
+              <div className="datalist">{data}</div>
+              <div>
+                <button className="List-Button" onClick={()=>removetask(i)}>Remove(-)</button>  
+                <button className="List-Button" onClick={() => {
+  TaskCompleted(i);
+  
+}}>Task completed: &#10004;</button> 
+              </div>
+              </p>
+            </React.Fragment>
+          )
+        })}
+
+        { datalist.length>=1 &&  <button className="Removeall" onClick={removeAll}>Remove All</button>}
+       
       </div>
     </React.Fragment>
   );

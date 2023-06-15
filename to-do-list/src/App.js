@@ -7,7 +7,7 @@ function App() {
   return (
     <React.Fragment>  <div className="App">
       <Todolist/>
-       <p>hi this is todolist</p>
+       <p>Stay Motivated &#128512;</p>
     </div></React.Fragment>
   );
 }
