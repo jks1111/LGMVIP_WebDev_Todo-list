@@ -17,14 +17,14 @@ export default function Todolist() {
   
   function removetask(i){
     const updateddatalist = datalist.filter((elem,id)=>{return i!==id;})
-     alert("Remove the Task?")
+     
     setdatalist(updateddatalist);
   }
   
   
   function TaskCompleted(i){
     const updateddatalist = datalist.filter((elem,id)=>{return i!==id;})
-    alert("Task Completed");
+    
     setdatalist(updateddatalist);
   } 
 
